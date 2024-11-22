@@ -67,7 +67,7 @@
     padding: 0.25rem 0.5rem;
     background-color: black;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   &__tooltip {
     visibility: hidden;
@@ -98,7 +98,7 @@
   &__info-container {
     width: 1.5rem;
     height: 1.5rem;
-    z-index: 2;
+    z-index: 3;
   }
 
   &__info-container:hover .input-form__tooltip {

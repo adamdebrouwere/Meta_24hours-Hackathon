@@ -7,6 +7,7 @@
 }
 
 .main {
+  padding-top: 3.5rem;
   @include tablet {
     margin: 0 25vw;
     border-right: 1px solid lightgray;
@@ -26,5 +27,5 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
