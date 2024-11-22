@@ -1,9 +1,6 @@
 import './App.scss';
-import fs from 'fs';
-import path from 'path';
 import { useState, useEffect} from 'react';
 
-const postFilePath = './postData.json';
 
 
 

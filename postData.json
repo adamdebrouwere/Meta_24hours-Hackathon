@@ -78,6 +78,86 @@
       "content": "A warm blanket, a good book, and a cup of tea—perfect evening. #CozyVibes #RelaxingNight",
       "keywords": "cozy, evening, tea, relaxation",
       "order": ""
+    },
+    {
+      "title": "Breaking News: New Tech Innovations! 🚀",
+      "author": "tech_insider",
+      "date": "2024-11-21",
+      "content": "The tech world is buzzing with the latest AI breakthrough. What does this mean for the future of our daily lives? 🌐 #TechNews #Innovation #AI",
+      "keywords": "tech, AI, news, innovation",
+      "order": ""
+    },
+    {
+      "title": "Game Day Victory! 🏆",
+      "author": "sports_fanatic",
+      "date": "2024-11-20",
+      "content": "What a win! Our team crushed the competition today. Time to celebrate! 🎉 #Sports #Victory #GameDay",
+      "keywords": "sports, game day, victory, team",
+      "order": ""
+    },
+    {
+      "title": "Homemade Pasta Night 🍝",
+      "author": "chef_lover",
+      "date": "2024-11-19",
+      "content": "Tried making fresh pasta from scratch tonight! It’s a bit of work, but totally worth it. 😋 #HomeCooking #PastaNight",
+      "keywords": "cooking, pasta, homemade, food",
+      "order": ""
+    },
+    {
+      "title": "Breaking: New Sports Record Set! 🏅",
+      "author": "sports_journalist",
+      "date": "2024-11-18",
+      "content": "A new world record was set in the 100m sprint today! The crowd was on their feet. 🏃‍♂️ #SportsNews #NewRecord #Athletics",
+      "keywords": "sports, record, news, athletics",
+      "order": ""
+    },
+    {
+      "title": "Steak Night Done Right 🥩",
+      "author": "grill_master",
+      "date": "2024-11-17",
+      "content": "Cooked up the perfect steak tonight—just the right amount of sear. 🔥 Who else loves grilling? #BBQLovers #SteakNight",
+      "keywords": "cooking, steak, BBQ, food",
+      "order": ""
+    },
+    {
+      "title": "Sports Update: Big Match Tomorrow! ⚽",
+      "author": "sports_reporter",
+      "date": "2024-11-16",
+      "content": "The big match is tomorrow! Who do you think will take home the trophy? 🏅 #SportsUpdate #MatchDay #Soccer",
+      "keywords": "sports, soccer, match, update",
+      "order": ""
+    },
+    {
+      "title": "Latest News: Global Economy Trends 🌍",
+      "author": "finance_expert",
+      "date": "2024-11-15",
+      "content": "Global markets are seeing some shifts today. Here’s what the experts are saying. 📉 #Economy #MarketTrends #FinanceNews",
+      "keywords": "news, economy, finance, trends",
+      "order": ""
+    },
+    {
+      "title": "Cooking Up a Storm: Chicken Alfredo 🍗",
+      "author": "kitchen_enthusiast",
+      "date": "2024-11-14",
+      "content": "Whipped up a delicious Chicken Alfredo for dinner tonight. Perfect comfort food. 🍝 #HomeCooking #ComfortFood",
+      "keywords": "cooking, chicken alfredo, food, dinner",
+      "order": ""
+    },
+    {
+      "title": "Sports Fanatics Rejoice: New Season Starts Soon! 🏈",
+      "author": "sports_enthusiast",
+      "date": "2024-11-13",
+      "content": "The new season is just around the corner! Get ready for some epic games ahead. 🏆 #SportsSeason #GameOn #Football",
+      "keywords": "sports, season, football, games",
+      "order": ""
+    },
+    {
+      "title": "Freshly Baked Bread Straight Out of the Oven 🍞",
+      "author": "home_baker",
+      "date": "2024-11-12",
+      "content": "Nothing beats the smell of freshly baked bread in the house. Who’s hungry? 😋 #Baking #FreshBread #HomeCooking",
+      "keywords": "cooking, baking, bread, food",
+      "order": ""
     }
   ]
   
