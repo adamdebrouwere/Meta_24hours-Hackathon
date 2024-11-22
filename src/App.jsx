@@ -1,8 +1,10 @@
 import './App.scss';
+import { useState, useEffect } from 'react';
+import postData from '/src/data/postData.json';
+import { sortPosts } from '/src/utils/sortPosts';
 import fs from 'fs';
 import path from 'path';
 import InputForm from './components/InputForm/InputForm';
-import { useState, useEffect } from 'react';
 
 const postFilePath = './postData.json';
 
