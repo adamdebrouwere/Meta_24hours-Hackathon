@@ -4,7 +4,8 @@ import postData from '/src/data/postData.json';
 import InputForm from './components/InputForm/InputForm';
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Following from './components/Following/Following';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Posts from './components/Posts/Posts.jsx'
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
               </>
             }
           />
+          <Route path="/forYou" element={<Navigate to="/" />} />
+          <Route path="/following" element={<Following />} />
         </Routes>
       </BrowserRouter>
     </>

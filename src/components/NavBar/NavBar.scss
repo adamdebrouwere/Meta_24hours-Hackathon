@@ -2,21 +2,20 @@
 @use "../../style/partials/mixins" as *;
 @use "../../style/partials/variables" as *;
 
-.navBar{
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-top: 2rem;
-    justify-content: space-between;
+.navBar {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-.navBar-logo{
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    flex-direction: row;
-  
+.navBar-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
 }
