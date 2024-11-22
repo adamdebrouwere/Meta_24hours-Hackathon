@@ -29,7 +29,7 @@ function Posts({ posts }) {
             <div className="post__image">
               <img
                 className="post__image-image"
-                src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-picture-icon-png-image_695350.jpg"
+                src={post.image}
                 alt={post.title}
               />
               {/* <img src={post.image || "https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-picture-icon-png-image_695350.jpg"} alt={post.title} /> */}
