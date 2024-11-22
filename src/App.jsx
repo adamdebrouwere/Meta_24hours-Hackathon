@@ -2,29 +2,17 @@ import './App.scss';
 import { useState, useEffect } from 'react';
 import postData from '/src/data/postData.json';
 import { sortPosts } from '/src/utils/sortPosts';
-import fs from 'fs';
-import path from 'path';
 import InputForm from './components/InputForm/InputForm';
 
-const postFilePath = './postData.json';
-
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(postData);
   const [tooltipVisible, setTooltipVisible] = useState(false);
 
-  console.log(tooltipVisible);
-
   useEffect(() => {
-    fetch('postData.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data);
-        console.log('postdata:', data);
-      })
-      .catch((error) => {
-        console.error('Error fetching file:', error);
-      });
+    const test = sortPosts("I've been stressed and want to relax", posts);
+    setPosts(test);
   }, []);
+
   return (
     <>
       <main className="main">
