@@ -1,7 +1,12 @@
 import './Header.scss';
 
 function Header() {
-  return <div>Header</div>;
+  return (
+    <>
+      <header>Header Placeholder - mobile</header>
+      <div>Tabs Placeholder - mobile</div>
+    </>
+  );
 }
 
 export default Header;
