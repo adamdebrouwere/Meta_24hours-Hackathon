@@ -10,8 +10,6 @@ function App() {
   const [posts, setPosts] = useState(postData)
 
   useEffect(() => {
-
-
     const test = sortPosts("I've been stressed and want to relax", posts);
     setPosts(test);
   }, [])
