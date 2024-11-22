@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import postData from '/src/data/postData.json';
 import { sortPosts } from '/src/utils/sortPosts';
 import InputForm from './components/InputForm/InputForm';
+import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header'
 
 function App() {
   const [posts, setPosts] = useState(postData);
@@ -15,6 +17,8 @@ function App() {
 
   return (
     <>
+      <Header />
+      <NavBar />
       <main className="main">
         <section className="input-form__section">
           <InputForm setTooltipVisible={setTooltipVisible} />

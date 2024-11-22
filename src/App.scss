@@ -2,6 +2,10 @@
 @use './style/partials/mixins' as *;
 @use './style/partials/variables' as *;
 
+#root {
+  position: relative;
+}
+
 .main {
   @include tablet {
     margin: 0 25vw;
