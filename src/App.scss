@@ -1,0 +1,26 @@
+@use './style/partials/global' as *;
+@use './style/partials/mixins' as *;
+@use './style/partials/variables' as *;
+
+.main {
+  @include tablet {
+    margin: 0 25vw;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+  }
+  @include desktop {
+    margin: 0 30vw;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1;
+}

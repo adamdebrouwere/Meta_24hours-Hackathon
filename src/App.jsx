@@ -10,6 +10,9 @@ const postFilePath = './postData.json';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+
+  console.log(tooltipVisible);
 
   useEffect(() => {
     fetch('postData.json')
@@ -23,21 +26,26 @@ function App() {
       });
   }, []);
   return (
-    <div>
-      <InputForm />
-      <h1>Posts</h1>
-      <ul>
-        {posts.map((post, index) => (
-          <li key={index}>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-            <small>
-              By {post.author} on {post.date}
-            </small>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <main className="main">
+        <section className="input-form__section">
+          <InputForm setTooltipVisible={setTooltipVisible} />
+        </section>
+        <h1>Posts</h1>
+        <ul>
+          {posts.map((post, index) => (
+            <li key={index}>
+              <h2>{post.title}</h2>
+              <p>{post.content}</p>
+              <small>
+                By {post.author} on {post.date}
+              </small>
+            </li>
+          ))}
+        </ul>
+        {tooltipVisible && <div className="overlay" />}
+      </main>
+    </>
   );
 }
 

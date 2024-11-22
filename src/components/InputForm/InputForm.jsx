@@ -1,15 +1,24 @@
 import './InputForm.scss';
 import { useState } from 'react';
 
-function InputForm() {
+function InputForm({ setTooltipVisible }) {
   const [textarea, setTextarea] = useState('');
 
   const handleInputChange = (e) => {
     setTextarea(e.target.value);
   };
+  const handleMouseOver = () => {
+    setTooltipVisible(true);
+  };
+
+  const handleMouseOut = () => {
+    setTooltipVisible(false);
+  };
+
   return (
     <form className="input-form">
       <div className="input-form__wrapper">
+        <div className="input-form__profile"></div>
         {!textarea && (
           <div className="input-form__placeholder">
             How do you feel today? 🧐 <br />
@@ -28,7 +37,11 @@ function InputForm() {
           onChange={handleInputChange}
           placeholder=""
         />
-        <div className="input-form__info-container">
+        <div
+          className="input-form__info-container"
+          onMouseOver={() => handleMouseOver(true)}
+          onMouseOut={() => handleMouseOut(false)}
+        >
           <img
             src="./icons/info_icon.svg"
             alt="info"
@@ -36,14 +49,16 @@ function InputForm() {
           />
           <div className="input-form__tooltip">
             <p>
-              We’re making your feed smarter and more personal. By sharing how
-              you feel or what you’re looking for, we’ll tailor your experience
-              to match your mood, interests, and needs. Whether you’re seeking
-              inspiration, connection, or something new, your feed will adapt to
-              bring you closer to what matters most.
+              We’re making your feed smarter and more personal. <br />
+              By sharing how you feel or what you’re looking for, we’ll tailor
+              your experience to match your mood, interests, and needs.
+              <br /> Whether you’re seeking inspiration, connection, or
+              something new, your feed will adapt to bring you closer to what
+              matters most.
             </p>
             <p className="input-form__info">
               Just tell us how you’re feeling today, and let us do the rest!
+              <br />
               (p.s. toss in your fav emojis) How do you feel today? How do you
               want to feel today? What do you want to see?
             </p>
