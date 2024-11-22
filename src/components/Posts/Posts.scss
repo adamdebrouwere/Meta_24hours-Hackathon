@@ -1,0 +1,38 @@
+@use "../../style/partials/global" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables";
+
+
+.post{
+    max-width: 50vh;
+}
+.post__card{
+    border: 2px solid pink
+}
+
+.post__card {
+    display: flex;
+    border: 2px solid red;
+    max-width: 100%;
+}
+
+.post__user-icon {
+    width: 3rem; 
+    height: 3rem; 
+    background-color: grey; 
+    border-radius: 50%; 
+    border: 2px solid blueviolet; 
+}
+
+.post__author{
+    border: 2px solid green; 
+}
+
+.post__image{
+    border: 2px solid blue;
+}
+
+.post__content{
+    border: 2px solid pink;
+    max-width: 100%;
+}
