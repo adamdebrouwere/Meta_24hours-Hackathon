@@ -18,7 +18,7 @@ function App() {
     //   console.error("Error fetching file:", error)
     // })
 
-    setPosts(sortPosts("I want to see happy posts", posts));
+    setPosts(sortPosts("I've been stressed and want to relax", posts));
     console.log(posts); // temporary testing
   }, [])
 
