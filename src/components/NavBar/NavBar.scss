@@ -3,6 +3,9 @@
 @use "../../style/partials/variables" as *;
 
 .navBar{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
     display: flex;
     flex-direction: row;
     width: 100%;

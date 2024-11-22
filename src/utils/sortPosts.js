@@ -1,10 +1,7 @@
+import keyword_dict from '/src/data/keywordsDict.json';
+
 const sortPosts = (userInput, posts) => {
   // console.log(posts); // pass
-
-  const keyword_dict = {
-    relaxation: ['relax', 'chill', 'calm', 'stress', 'unwind'],
-    creativity: ['art', 'inspiration', 'creative', 'design', 'make', 'create'],
-  };
 
   // Parse the user input into lowercase and split it into individual words
   const userInputWords = userInput.toLowerCase().split(/\s+/);
@@ -33,10 +30,17 @@ const sortPosts = (userInput, posts) => {
   const calculateMatchScore = (post) => {
     let score = 0;
     categories.forEach((category) => {
+      let categoryMatched = false;
       post.keywords.split(',').forEach((keyword) => {
-        if (category === keyword.trim()) {
-          score += 1; // Increase score for each matched keyword
+        if (
+          !categoryMatched &
+          (category === keyword.trim() ||
+            keyword_dict[category].includes(keyword.trim()))
+        ) {
+          score += 20; // Increase score for each matched keyword
+          categoryMatched = true;
         }
+        score += Math.floor(Math.random() * 5) + 1; // Add some randomness
       });
     });
     return score;
