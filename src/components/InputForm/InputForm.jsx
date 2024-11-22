@@ -70,8 +70,8 @@ function InputForm({ setTooltipVisible, posts, setPosts }) {
             </p>
             <p className="input-form__info">
               Just tell us how you’re feeling today, and let us do the rest!
-              <br />
-              (p.s. Toss in your fav emojis to express yourself!)
+              {/* <br />
+              (p.s. Toss in your fav emojis to express yourself!) */}
             </p>
           </div>
         </div>
