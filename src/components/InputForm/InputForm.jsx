@@ -1,8 +1,12 @@
 import './InputForm.scss';
 import { useState } from 'react';
+import { sortPosts } from '/src/utils/sortPosts';
+import { useNavigate } from 'react-router-dom';
 
-function InputForm({ setTooltipVisible }) {
+function InputForm({ setTooltipVisible, posts, setPosts }) {
   const [textarea, setTextarea] = useState('');
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setTextarea(e.target.value);
@@ -15,8 +19,16 @@ function InputForm({ setTooltipVisible }) {
     setTooltipVisible(false);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const userInputValue = event.target.userInput.value;
+    const sortedPosts = sortPosts(userInputValue, posts);
+    setPosts(sortedPosts);
+    navigate('/');
+  };
+
   return (
-    <form className="input-form">
+    <form className="input-form" onSubmit={handleSubmit}>
       <div className="input-form__wrapper">
         <div className="input-form__profile"></div>
         {!textarea && (
@@ -33,6 +45,7 @@ function InputForm({ setTooltipVisible }) {
         )}
         <textarea
           className="input-form__input"
+          name="userInput"
           type="text"
           onChange={handleInputChange}
           placeholder=""
@@ -59,8 +72,7 @@ function InputForm({ setTooltipVisible }) {
             <p className="input-form__info">
               Just tell us how you’re feeling today, and let us do the rest!
               <br />
-              (p.s. toss in your fav emojis) How do you feel today? How do you
-              want to feel today? What do you want to see?
+              (p.s. Toss in your fav emojis to express yourself!)
             </p>
           </div>
         </div>
