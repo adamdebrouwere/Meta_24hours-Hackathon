@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import "./App.scss";
-import fs from "fs";
-import path from "path";
 import { useState, useEffect } from "react";
 import postData from "/src/data/postData.json";
 import { sortPosts } from "/src/utils/sortPosts";
 import Posts from "/src/components/Posts/Posts.jsx";
-=======
-import './App.scss';
-import { useState, useEffect} from 'react';
-import postData from '/src/data/postData.json';
-import { sortPosts } from '/src/utils/sortPosts';
->>>>>>> develop
 
 
 
@@ -28,7 +19,6 @@ function App() {
 
   return (
     <div>
-      <h1>Posts</h1>
       <Posts posts={posts} />
       {/* <ul>
       {posts.map((post, index) => (
