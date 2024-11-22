@@ -1,0 +1,22 @@
+@use "../../style/partials/global" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
+
+.navBar{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 2rem;
+    justify-content: space-between;
+}
+
+.navBar-logo{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+  
+}

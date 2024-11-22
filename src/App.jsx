@@ -1,35 +1,45 @@
-import "./App.scss";
-import { useState, useEffect } from "react";
-import postData from "/src/data/postData.json";
-import { sortPosts } from "/src/utils/sortPosts";
-import Posts from "/src/components/Posts/Posts.jsx";
-
-
-
+import './App.scss';
+import { useState, useEffect } from 'react';
+import postData from '/src/data/postData.json';
+import InputForm from './components/InputForm/InputForm';
+import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Posts from './components/Posts/Posts.jsx'
 
 function App() {
   const [posts, setPosts] = useState(postData);
-
-  useEffect(() => {
-
-
-    setPosts(sortPosts("I want to see happy posts", posts));
-    console.log(posts); // temporary testing
-  }, []);
+  const [tooltipVisible, setTooltipVisible] = useState(false);
 
   return (
-    <div>
-      <Posts posts={posts} />
-      {/* <ul>
-      {posts.map((post, index) => (
-        <li key={index}>
-          <p>{post.content}</p>
-          <small>By {post.author} on {post.date}</small>
-        </li>
-      ))}
-    </ul> */}
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <main className="main">
+                  <section className="input-form__section">
+                    <InputForm
+                      setTooltipVisible={setTooltipVisible}
+                      posts={posts}
+                      setPosts={setPosts}
+                    />
+                  </section>
+                  <Posts posts={posts} />
+                  {tooltipVisible && <div className="overlay" />}
+                </main>
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
+
 
 export default App;
