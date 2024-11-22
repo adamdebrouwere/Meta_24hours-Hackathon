@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
 import Following from './components/Following/Following';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Posts from './components/Posts/Posts.jsx'
+import Posts from './components/Posts/Posts.jsx';
 
 function App() {
   const [posts, setPosts] = useState(postData);
@@ -16,6 +16,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
+
         <NavBar />
         <Routes>
           <Route
@@ -43,6 +44,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
