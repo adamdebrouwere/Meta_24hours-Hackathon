@@ -6,6 +6,7 @@
   padding: 0.7rem;
   border-bottom: 1px solid lightgray;
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -20,7 +21,7 @@
   }
   &__input {
     flex: 1;
-    height: 4rem;
+    height: 5rem;
     border: none;
     outline: none;
     resize: none;
@@ -39,5 +40,36 @@
     background-color: black;
     color: white;
     border-radius: 3px;
+  }
+  &__tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    margin: 0 1rem;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+  }
+  &__info {
+    margin-top: 1rem;
+  }
+  &__info-container {
+    height: 1rem;
+  }
+
+  &__info-container:hover .input-form__tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__info-container:hover .input-form__tooltip {
+    visibility: visible;
+    opacity: 1;
   }
 }

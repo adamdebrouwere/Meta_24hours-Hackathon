@@ -1,5 +1,4 @@
 import './InputForm.scss';
-import infoIcon from '../../assets/icons/info_icon.svg';
 import { useState } from 'react';
 
 function InputForm() {
@@ -18,6 +17,7 @@ function InputForm() {
             <br />
             What do you want to see? 🐾
             <br />
+            <br />
             E.g. I feel a little down today but I want to cheer up, show me
             animals
           </div>
@@ -29,7 +29,11 @@ function InputForm() {
           placeholder=""
         />
         <div className="input-form__info-container">
-          <img src={infoIcon} alt="info" className="input-form__icon" />
+          <img
+            src="./icons/info_icon.svg"
+            alt="info"
+            className="input-form__icon"
+          />
           <div className="input-form__tooltip">
             <p>
               We’re making your feed smarter and more personal. By sharing how
@@ -38,7 +42,7 @@ function InputForm() {
               inspiration, connection, or something new, your feed will adapt to
               bring you closer to what matters most.
             </p>
-            <p>
+            <p className="input-form__info">
               Just tell us how you’re feeling today, and let us do the rest!
               (p.s. toss in your fav emojis) How do you feel today? How do you
               want to feel today? What do you want to see?
