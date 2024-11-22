@@ -18,8 +18,8 @@ function App() {
     //   console.error("Error fetching file:", error)
     // })
 
-    setPosts(sortPosts("I've been stressed and want to relax", posts));
-    console.log(posts); // temporary testing
+    const test = sortPosts("I've been stressed and want to relax", posts);
+    setPosts(test);
   }, [])
 
   return (
