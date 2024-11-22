@@ -1,17 +1,43 @@
 @use '../../style/partials/global' as *;
 @use '../../style/partials/mixins' as *;
-
+@use '../../style/partials/variables' as *;
 .input-form {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  border-bottom: 1px solid lightgray;
   &__wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
+  &__placeholder {
+    position: absolute;
+    color: #888;
+    font-size: 0.6rem;
+    line-height: 1.6;
+    pointer-events: none;
+    z-index: 1;
+  }
   &__input {
     flex: 1;
+    height: 4rem;
     border: none;
     outline: none;
+    resize: none;
+    z-index: 0;
+  }
+  &__icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: end;
+  }
+  &__btn {
+    padding: 0.1rem 0.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
   }
 }
